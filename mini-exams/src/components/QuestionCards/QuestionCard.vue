@@ -27,7 +27,7 @@ import AnswerSection from './AnswerSection.vue'
     
     <QuestionFormulation :formulation="formulation" />
     
-    <AnswerSection :answerAlternatives="answerAlternatives"/>
+    <AnswerSection />
 
   </div>
 </template>
