@@ -2,15 +2,24 @@
   export default {
     props: [
       'answerId',
-      'answerText'
-      ]    
+      'answerText',
+      ],
+    emits: [
+      'isSelected'
+    ]
   }
 </script>
 
 <template>
   <div class="answerAlternative">
-    <input type="radio" id="alternative{{ answerId }}">
-    <label for="alternative{{ answerId }}">{{ answerText }}</label>
+    <input type="checkbox" 
+      :id="'alternative'+answerId"
+      @input="this.$emit('isSelected', $event.target.checked, answerId)"/>
+
+    <label :for="'alternative'+answerId">{{ answerText }}</label>
+
+    <p>{{ isSelected }}</p>
+
   </div>
 </template>
 

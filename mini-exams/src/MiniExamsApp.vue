@@ -11,16 +11,17 @@
           {
             id: 1, title: 'Triangles', formulation:'What is the hypotenuse?',
             answerAlternatives: [
-              { id:1, text: "The longest side of a right triangle"},
-              { id:2, text: "The rightest side of a long triangle"},
+              { id:1, text: "The longest side of a right triangle" },
+              { id:2, text: "The rightest side of a long triangle" }
             ]
           },
           {
             id: 2, title: 'Squares', formulation:'What is the area of a square?',
             answerAlternatives: [
-              { id:1, text: "The square of the side length"},
-              { id:2, text: "The length of the square side"},
-              { id:3, text: "the side of the square length"},
+              { id:1, text: "The square of the side length" },
+              { id:2, text: "The length of the square side" },
+              { id:3, text: "The side of the square length" },
+              { id:4, text: "The number of unit squares inside it" }
             ]
           }
         ]

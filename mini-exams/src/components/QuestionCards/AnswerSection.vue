@@ -6,17 +6,37 @@ import AnswerAlternative from './AnswerAlternative.vue'
         ],
         components: {
             AnswerAlternative
+        },
+        data() {
+            return {
+                selectedAnswers: []
+            }
+        },
+        methods: {
+            onSelected(isSelected, id) {
+                if(isSelected && !this.selectedAnswers.includes(id)) {
+                   this.selectedAnswers.push(id)
+                } else if (!isSelected && this.selectedAnswers.includes(id)) {
+                    const index = this.selectedAnswers.indexOf(id);
+                    this.selectedAnswers.splice(index, 1);
+                }
+            }
         }
     }
 </script>
 
 <template>
     <div class="answerAlternatives">
-      <AnswerAlternative v-for="alternative in answerAlternatives"
-          :key="alternative.id"
-          :answerId="alternative.id"
-          :answerText="alternative.text"/>
+      <AnswerAlternative 
+        v-for="alternative in answerAlternatives"
+        :key="alternative.id"
+        :answerId="alternative.id"
+        :answerText="alternative.text"
+        @isSelected="onSelected"
+        />
     </div>
+
+    <p>Selected answers: {{ selectedAnswers }}</p>
 </template>
 
 <style>
