@@ -7,24 +7,29 @@
     },
     data() {
       return {
+        title: '',
         cards: [
           {
-            id: 1, title: 'Triangles', formulation:'What is the hypotenuse?',
-            answerAlternatives: [
-              { id:1, text: "The longest side of a right triangle" },
-              { id:2, text: "The rightest side of a long triangle" }
-            ]
-          },
-          {
-            id: 2, title: 'Squares', formulation:'What is the area of a square?',
-            answerAlternatives: [
-              { id:1, text: "The square of the side length" },
-              { id:2, text: "The length of the square side" },
-              { id:3, text: "The side of the square length" },
-              { id:4, text: "The number of unit squares inside it" }
-            ]
+            id: 1
           }
         ]
+      }
+    },
+    methods: {
+      newCard() {
+        this.cards.push({id:this.cards.length+1});
+      },
+      removeCard(id) {//<-- somehow this does not work as expected
+        console.log('removing card number ' + id) 
+        console.log('looking at entry ' + this.cards.map(c => c.id).indexOf(id));
+        this.cards.splice(id-1, 1);
+        this.reorderQuestions();
+      },
+      reorderQuestions() {//<-- somehow this does not work as expected
+        for (let i = 0; i < this.cards.length; i++) {
+          const card = this.cards[i];
+          card.id = i+1;
+        }
       }
     }
   }
@@ -32,20 +37,27 @@
 
 <template>
   <header>
-    <div id="examContext">
-      <h1>My mini-exam</h1>
+    <div class="examContext">
+      <input type="text" v-model="title" placeholder="Name your exam..."/>
     </div>
   </header>
 
   <main>
+    <div class="cards">
       <QuestionCard 
-        v-for="card in cards" 
-        :key="card.id" 
-        :number="card.id"
-        :title="card.title"
-        :formulation="card.formulation"
-        :answerAlternatives="card.answerAlternatives"
-        />
+      v-for="card in cards" 
+      :key="card.id" 
+      :number="card.id"
+      :title="card.title"
+      :formulation="card.formulation"
+      :answerAlternatives="card.answerAlternatives"
+      @deleted="removeCard"
+      />
+    </div>
+
+    <div class="addQuestion">
+      <button @click="newCard">Add a new question</button>
+    </div>
   </main>
 </template>
 
@@ -56,6 +68,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.cards {
+  width: 200%;
+}
+
+.addQuestion {
+  margin: 1em;
+}
+
+.examContext>input {
+  font-size: larger;
 }
 
 </style>
