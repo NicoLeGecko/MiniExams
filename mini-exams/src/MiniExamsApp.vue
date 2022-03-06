@@ -1,12 +1,16 @@
 <script setup>
+import QuestionCard from './components/QuestionCard.vue';
 </script>
 
 <template>
   <header>
-    <p>hi</p>
+    <div id="examContext">
+      <h1>My mini-exam</h1>
+    </div>
   </header>
 
   <main>
+    <QuestionCard />
   </main>
 </template>
 
@@ -14,11 +18,12 @@
 @import './assets/miniExamsBase.css';
 
 #app {
-  color: brown;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
-  color: blueviolet;
 }
 
 </style>
