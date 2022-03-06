@@ -1,0 +1,28 @@
+Many thanks for giving me this interesting task, and for checking out my result!
+It proved to be quite challenging. I surely learned a lot :)
+
+Here's the timeline of my effort: 
+4h - learning Vue on Codecademy
+---
+1h - initial drawing and backlog
+1h - setting up the dev environment
+1h - creating a static card 
+2h - refactoring card
+1h - knowledge of selected answer alternatives
+2h - adding/removing answer alternatives
+2h - adding/removing question cards
+---
+
+The result is a little underwhelming to my taste.
+I didn't manage to implement the preview or test-taking.
+Even most of my "rough first backlog" was not implemented.
+Many other ideas I had along the way, I had to let go to get something done in time. (UX, refactoring, data structures...)
+
+On the existing parts, some improvements could be:
+- The UI and UX. Starting with centering and sizing elements correctly.
+- More separation of concerns. My model is hardcoded in the views, and there are no clear interfaces.
+- More homogenous coding patterns. Proper models and encapsulation.
+- Injecting dependecies, making use of design patterns, to decouple components.
+- Fixing the bug (issue #5).
+
+Thanks again!
