@@ -74,11 +74,11 @@ import AnswerAlternative from './AnswerAlternative.vue'
 .newAnswerForm {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .newAnswer {
-    width: 83%;
+    width: 90%;
 }
 
 </style>

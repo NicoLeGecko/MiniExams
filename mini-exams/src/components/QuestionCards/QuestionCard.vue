@@ -8,6 +8,9 @@ import AnswerSection from './AnswerSection.vue'
     props: [
       'number',
       ],
+    emits: [
+      'deleted'
+    ],
     components: {
     AnswerAlternative,
     QuestionHeader,
@@ -25,22 +28,32 @@ import AnswerSection from './AnswerSection.vue'
     <QuestionFormulation />
     
     <AnswerSection />
+      </div>
 
-  </div>
+    <div class="removeQuestion">
+      <button @click="this.$emit('deleted', number)">Remove question</button>
+    </div>
+
 </template>
 
-<style scoped>
+<style>
 .questionCard {
   background-color: royalblue;
   padding: 0.3em 0.3em;
   width: 100%;
-  margin:2em
+  margin-top:2em
 }
-
-/* .questionCard:hover {
+/* 
+.questionCard:hover {
   padding: 0.4em 0.4em;
   transition: 150ms;
   transition-timing-function: ease-in-out;
 } */
+
+.removeQuestion {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 0.5em
+}
 
 </style>
