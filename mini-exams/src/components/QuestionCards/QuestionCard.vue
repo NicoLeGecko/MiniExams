@@ -40,10 +40,10 @@ import AnswerSection from './AnswerSection.vue'
   margin:2em
 }
 
-.questionCard:hover {
+/* .questionCard:hover {
   padding: 0.4em 0.4em;
   transition: 150ms;
   transition-timing-function: ease-in-out;
-}
+} */
 
 </style>
