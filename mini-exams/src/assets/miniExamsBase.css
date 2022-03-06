@@ -1,4 +1,14 @@
 body {
   background-color: rgb(5, 5, 53);
-  color: aliceblue;
+  color: honeydew;
+}
+
+input[type=text] {
+  background-color: inherit;
+  color: honeydew;
+  border: 0;
+}
+
+::placeholder {
+  color: honeydew;
 }

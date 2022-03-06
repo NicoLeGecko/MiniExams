@@ -2,15 +2,20 @@
     export default {
         props: [
             'number',
-            'title'
-        ]
+        ],
+        data() {
+          return {
+            title: ''
+          }
+        }
     }
 </script>
 
 <template>
     <div class="questionHeader">
         <p class="questionNumber">{{ number }}</p>
-        <p class="questionTitle">{{ title }}</p>
+        <input type="text" class="questionTitle" v-model="title"
+        placeholder="Title..."/>
     </div>
 </template>
 

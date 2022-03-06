@@ -60,7 +60,7 @@ import AnswerAlternative from './AnswerAlternative.vue'
         <input type="submit" value="Add" v-bind:disabled="!this.newAlternative"/>
     </form>
 
-    <p>Selected answers: {{ selectedAnswers }}</p>
+    <!-- <p>Selected answers: {{ selectedAnswers }}</p> -->
 </template>
 
 <style>
@@ -78,7 +78,7 @@ import AnswerAlternative from './AnswerAlternative.vue'
 }
 
 .newAnswer {
-    width: 80%;
+    width: 83%;
 }
 
 </style>

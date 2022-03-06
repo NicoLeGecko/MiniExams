@@ -7,9 +7,6 @@ import AnswerSection from './AnswerSection.vue'
   export default {
     props: [
       'number',
-      'title',
-      'formulation',
-      'answerAlternatives'
       ],
     components: {
     AnswerAlternative,
@@ -23,9 +20,9 @@ import AnswerSection from './AnswerSection.vue'
 <template>
   <div class="questionCard">
     
-    <QuestionHeader :number="number" :title="title"/>
+    <QuestionHeader :number="number"/>
     
-    <QuestionFormulation :formulation="formulation" />
+    <QuestionFormulation />
     
     <AnswerSection />
 

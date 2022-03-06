@@ -7,22 +7,10 @@
     },
     data() {
       return {
+        title: '',
         cards: [
           {
-            id: 1, title: 'Triangles', formulation:'What is the hypotenuse?',
-            answerAlternatives: [
-              { id:1, text: "The longest side of a right triangle" },
-              { id:2, text: "The rightest side of a long triangle" }
-            ]
-          },
-          {
-            id: 2, title: 'Squares', formulation:'What is the area of a square?',
-            answerAlternatives: [
-              { id:1, text: "The square of the side length" },
-              { id:2, text: "The length of the square side" },
-              { id:3, text: "The side of the square length" },
-              { id:4, text: "The number of unit squares inside it" }
-            ]
+            id: 1
           }
         ]
       }
@@ -32,20 +20,20 @@
 
 <template>
   <header>
-    <div id="examContext">
-      <h1>My mini-exam</h1>
+    <div class="examContext">
+      <input type="text" v-model="title" placeholder="My mini-exam"/>
     </div>
   </header>
 
   <main>
-      <QuestionCard 
-        v-for="card in cards" 
-        :key="card.id" 
-        :number="card.id"
-        :title="card.title"
-        :formulation="card.formulation"
-        :answerAlternatives="card.answerAlternatives"
-        />
+    <QuestionCard 
+      v-for="card in cards" 
+      :key="card.id" 
+      :number="card.id"
+      :title="card.title"
+      :formulation="card.formulation"
+      :answerAlternatives="card.answerAlternatives"
+      />
   </main>
 </template>
 
@@ -56,6 +44,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.examContext>input {
+  font-size: larger;
 }
 
 </style>

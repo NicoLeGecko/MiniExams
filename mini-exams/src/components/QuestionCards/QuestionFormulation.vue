@@ -1,14 +1,17 @@
 <script>
     export default {
-        props: [
-            'formulation'
-        ]
+        data() {
+            return {
+                formulation: ''
+            }
+        }
     }
 </script>
 
 <template>
     <div class="questionFormulation">
-        <p>{{ formulation }}</p>
+        <input type="text" v-model="formulation" 
+            placeholder="Formulate a question here..."/>
     </div>
 </template>
 
