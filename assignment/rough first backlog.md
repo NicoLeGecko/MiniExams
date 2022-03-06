@@ -1,4 +1,4 @@
-Priorities in each feature
+## Priorities in each feature
 
 1. it works
 2. it's coded right
@@ -6,27 +6,27 @@ Priorities in each feature
 4. fits in a mobile layout
 5. it's fast
 
-Features:
+## Features:
 
 A. Create a question.
 - "Create" button brings a simple card with:
- . Question formulation (body)
- . Answer alternatives
- . Set accepted answer alternatives
- (.) insert images
+ - Question formulation (body)
+ - Answer alternatives
+ - Set accepted answer alternatives
+ - (insert images)
 
 B. Test the exam
 - A simple "test" button launches the exam
- . launch in new tab?
- . "send in" button freezes answers and colorizes them,
- . (.) randomized answer alternatives 
+ - launch in new tab?
+ - "send in" button freezes answers and colorizes them,
+ - (randomized answer alternatives) 
 
 C. Exam edit/preview switch
 - it's the same window as the edit one,
 - questions flow bottom up
 - a "preview" switch makes the page go into focus mode:
- . hides the correct answers
- . read-only (no ticking, no "add" button)
+ - hides the correct answers
+ - read-only (no ticking, no "add" button)
 
 D. Grading (points)
 - points are set on questions, 
