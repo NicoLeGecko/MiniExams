@@ -11,7 +11,7 @@
 <template>
     <div class="questionFormulation">
         <input type="text" v-model="formulation" 
-            placeholder="Formulate a question here..."/>
+            placeholder="Formulate a question..."/>
     </div>
 </template>
 

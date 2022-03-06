@@ -21,7 +21,7 @@
 <template>
   <header>
     <div class="examContext">
-      <input type="text" v-model="title" placeholder="My mini-exam"/>
+      <input type="text" v-model="title" placeholder="Name your exam..."/>
     </div>
   </header>
 

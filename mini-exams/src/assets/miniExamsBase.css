@@ -10,5 +10,5 @@ input[type=text] {
 }
 
 ::placeholder {
-  color: honeydew;
+  color: rgba(240, 255, 240, 0.767);
 }
